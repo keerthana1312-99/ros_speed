@@ -1,0 +1,13 @@
+speed_control_node:
+  ros__parameters:
+    max_speed: 10.0
+    min_speed: 0.0
+    stop_distance: 2.0
+    time_headway: 1.5
+    lane_width: 3.5
+    front_angle_deg: 60.0
+    max_considered_range: 50.0
+    lowpass_alpha: 0.5
+    emergency_brake_rel_closure: -5.0
+    radar_fov_deg: 60.0
+

@@ -1,0 +1,20 @@
+Panels:
+- Class: rviz/Displays
+  Name: Displays
+- Class: rviz/Views
+  Name: Views
+Visualization Manager:
+  Global Options:
+    Fixed Frame: base_link
+  Displays:
+  - Class: rviz/MarkerArray
+    Name: SpeedControlMarkers
+    Topic: /speed_control/markers
+  - Class: rviz/TF
+    Name: TF
+    Show Arrows: true
+    Show Axes: true
+Views:
+  Current:
+    Class: rviz/TopDownOrtho
+
