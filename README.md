@@ -45,6 +45,10 @@ source ~/.bashrc
 ```
 ros2 launch speed_control speed_control.launch.py
 ```
+In another terminal run rviz2
+```
+rviz2
+```
 - radar_dummy_publisher → Publishes fake radar detections
 - lidar_dummy_publisher → Publishes fake Lidar point clouds
 - speed_control_node → Computes target speed and publishes /cmd_vel
