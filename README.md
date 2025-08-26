@@ -50,13 +50,13 @@ ros2 launch speed_control speed_control.launch.py
 
 7. Visualize with RViz
 
-RViz shows the vehicle’s environment, obstacles, and speed:
-Markers → /speed_control/markers
-Text: Target speed
-Sphere: Nearest Lidar obstacle
-Cube: Nearest Radar obstacle
-TF → Shows the vehicle frame (base_link) and coordinate axes.
-View → Top-down orthographic view (TopDownOrtho)
+- RViz shows the vehicle’s environment, obstacles, and speed:
+- Markers → /speed_control/markers
+- Text: Target speed
+- Sphere: Nearest Lidar obstacle
+- Cube: Nearest Radar obstacle
+- TF → Shows the vehicle frame (base_link) and coordinate axes.
+-  View → Top-down orthographic view (TopDownOrtho)
 
 # Summary
 
