@@ -72,7 +72,7 @@ rviz2
 - RViz visualizes the obstacles and the target speed in real-time for easy debugging.
 
 # Folder Structure
-
+```
 speed_control/
 ├── CMakeLists.txt
 ├── package.xml
@@ -90,7 +90,7 @@ speed_control/
 │   └── speed_control.launch.py       # Launch file
 └── rviz/
     └── speed_control.rviz            # RViz config
-
+```
 # ROS Speed Control
 This ROS2 node, SpeedControlNode, dynamically controls the speed of an autonomous vehicle using Lidar and Radar data. It subscribes to Lidar point clouds and Radar detections to compute the nearest obstacles and calculates a safe target speed, considering parameters like stop distance, time headway, and emergency braking. The node then publishes the target speed and velocity commands (cmd_vel) and visualizes obstacles and speed information in RViz using markers. It also applies low-pass filtering to smooth the speed changes for safe navigation.
 
