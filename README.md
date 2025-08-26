@@ -1,24 +1,17 @@
 # ROS Speed Control
 This ROS2 node, SpeedControlNode, dynamically controls the speed of an autonomous vehicle using Lidar and Radar data. It subscribes to Lidar point clouds and Radar detections to compute the nearest obstacles and calculates a safe target speed, considering parameters like stop distance, time headway, and emergency braking. The node then publishes the target speed and velocity commands (cmd_vel) and visualizes obstacles and speed information in RViz using markers. It also applies low-pass filtering to smooth the speed changes for safe navigation.
 
-# The LidarDummyPublisher and RadarDummyPublisher nodes are used to simulate sensor inputs for your speed control system:
-
+# Lidar and Radar Inputs
+The LidarDummyPublisher and RadarDummyPublisher nodes are used to simulate sensor inputs for your speed control system:
 ### LidarDummyPublisher
-
 Publishes random point cloud data on /lidar/points.
-
 Simulates obstacles detected by a Lidar sensor.
-
 Allows the speed control node to calculate distances to nearby objects without real hardware.
 
 ### RadarDummyPublisher
-
 Publishes dummy radar detections on /radar_detections.
-
 Each detection includes a distance and relative velocity.
-
 Lets the speed control node respond to moving obstacles (like vehicles) and compute safe speeds.
-
 The main purpose was these dummy nodes to test and debug SpeedControlNode safely in simulation, without needing actual Lidar or Radar hardware.
 
 # Radar messages
