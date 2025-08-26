@@ -1,3 +1,5 @@
+#Environment Setup and Build steps
+
 1. Prerequisites
 - Ubuntu 22.04 (or compatible)
 - ROS2 Humble/Galactic installed
@@ -64,6 +66,26 @@ ros2 launch speed_control speed_control.launch.py
 - The dummy Radar publishes detections with distance and relative velocity.
 - The SpeedControlNode subscribes to these, computes the nearest obstacle, applies a low-pass filter, and publishes the safe target speed and velocity commands.
 - RViz visualizes the obstacles and the target speed in real-time for easy debugging.
+
+# Folder Structure
+
+speed_control/
+├── CMakeLists.txt
+├── package.xml
+├── include/speed_control/
+│   └── speed_control_node.hpp
+├── msg/
+│   ├── RadarDetection.msg
+│   └── RadarDetections.msg
+├── src/
+│   ├── speed_control_node.cpp        # Main node
+│   └── radar_dummy_publisher.cpp     # Optional radar simulator
+├── config/
+│   └── params.yaml                   # Parameters
+├── launch/
+│   └── speed_control.launch.py       # Launch file
+└── rviz/
+    └── speed_control.rviz            # RViz config
 
 # ROS Speed Control
 This ROS2 node, SpeedControlNode, dynamically controls the speed of an autonomous vehicle using Lidar and Radar data. It subscribes to Lidar point clouds and Radar detections to compute the nearest obstacles and calculates a safe target speed, considering parameters like stop distance, time headway, and emergency braking. The node then publishes the target speed and velocity commands (cmd_vel) and visualizes obstacles and speed information in RViz using markers. It also applies low-pass filtering to smooth the speed changes for safe navigation.
